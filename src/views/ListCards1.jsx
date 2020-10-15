@@ -3,19 +3,19 @@ import { Context } from '../store/appContext';
 import { Button } from 'react-bootstrap';
 
 //seccion - Hooks =  useContext()
-import Cards from './Cards.jsx';
+import Cards1 from './Cards1.jsx';
 
-const ListCards = () => {
+const ListCards1 = () => {
     const { store, actions } = useContext(Context);
         return (
             <>
-                <Button variant="outline-light" onClick={ ()=>actions.fetchSwapies() }></Button>
+                <Button variant="outline-light" onClick={ ()=>actions.fetchSwapies1() }></Button>
                 {
-                    store.swapiList.map( (item, index)=>( <Cards key={index} data={item}/> ))
+                    store.swapiList1.map( (item, index)=>( <Cards1 key={index} data={item}/> ))
                     
                 }
             </>
         )
 }
 
-export default ListCards;
+export default ListCards1;

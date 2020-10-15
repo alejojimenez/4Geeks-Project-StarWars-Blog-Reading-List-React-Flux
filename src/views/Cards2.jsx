@@ -3,7 +3,7 @@ import { BsHeart } from 'react-icons/bs';
 import { CardDeck, Card, Button } from 'react-bootstrap';
 
 
-const Cards = (props) => {
+const Cards2 = (props) => {
     return (
         <>
             <CardDeck>
@@ -11,13 +11,13 @@ const Cards = (props) => {
                     style={{ width: '24rem' }}
                     className = "col-md-10"
                 >
-                    <Card.Img variant="top" src="https://babyology.com.au/wp-content/uploads/2019/11/yoda-wide.jpg" />
+                    <Card.Img variant="top" src="https://media.wired.com/photos/5dfbd524f3e943000879987a/master/pass/Culture_MilitaryStarWars_MCDSTWA_WD041.jpg" />
                     <Card.Body>
                         <Card.Title>{props.data.name}</Card.Title>
                         <Card.Text>
-                            <p>Gender: {props.data.gender}</p>
-                            <p>Hair Color: {props.data.hair_color}</p>
-                            <p>Eye-Color: {props.data.eye_color}</p>
+                            <p>Model: {props.data.model}</p>
+                            <p>Length: {props.data.length}</p>
+                            <p>Passengers: {props.data.passengers}</p>
                         </Card.Text>
                         <Button variant="outline-primary">Learn more!</Button>{'  '}
                         <Button variant="outline-warning"> <BsHeart /> </Button>
@@ -33,4 +33,4 @@ const Cards = (props) => {
     )
 }
 
-export default Cards;
+export default Cards2;

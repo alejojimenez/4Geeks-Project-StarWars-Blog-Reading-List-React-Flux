@@ -6,7 +6,7 @@ const NavBarTop = () => {
 
     return (
         <>
-            <Navbar bg="light">
+            <Navbar bg="light" className = "fixed-top">
                 <Navbar.Brand href="#home">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
