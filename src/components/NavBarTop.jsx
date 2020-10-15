@@ -6,12 +6,12 @@ const NavBarTop = () => {
 
     return (
         <>
-            <Navbar bg="dark">
+            <Navbar bg="light">
                 <Navbar.Brand href="#home">
                 <img
-                    src="./img/logo.svg"
-                    width="30"
-                    height="30"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
+                    width="60"
+                    height="40"
                     className="d-inline-block align-top"
                     alt=""
                 />
