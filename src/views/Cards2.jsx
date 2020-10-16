@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BsHeart } from 'react-icons/bs';
-import { CardDeck, Card, Button } from 'react-bootstrap';
+import { CardDeck, Card, Button, Image } from 'react-bootstrap';
 
 
 const Cards2 = (props) => {
@@ -11,15 +12,19 @@ const Cards2 = (props) => {
                     style={{ width: '24rem' }}
                     className = "col-md-10"
                 >
-                    <Card.Img variant="top" src="https://media.wired.com/photos/5dfbd524f3e943000879987a/master/pass/Culture_MilitaryStarWars_MCDSTWA_WD041.jpg" />
+                    <Image variant="top" src="https://media.wired.com/photos/5dfbd524f3e943000879987a/master/pass/Culture_MilitaryStarWars_MCDSTWA_WD041.jpg" fluid />
                     <Card.Body>
                         <Card.Title>{props.data.name}</Card.Title>
                         <Card.Text>
-                            <p>Model: {props.data.model}</p>
-                            <p>Length: {props.data.length}</p>
-                            <p>Passengers: {props.data.passengers}</p>
+                            <div>Model: {props.data.model}</div>
+                            <div>Length: {props.data.length}</div>
+                            <div>Passengers: {props.data.passengers}</div>
                         </Card.Text>
-                        <Button variant="outline-primary">Learn more!</Button>{'  '}
+                        <Button variant="outline-primary">
+                            <Link to = '/card-detail2'>
+                                Learn more!
+                            </Link>
+                        </Button>{'  '}
                         <Button variant="outline-warning"> <BsHeart /> </Button>
                     </Card.Body>
                 </Card>

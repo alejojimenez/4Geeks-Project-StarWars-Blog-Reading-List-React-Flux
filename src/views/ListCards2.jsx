@@ -11,7 +11,7 @@ const ListCards2 = () => {
             <>
                 <Button variant="outline-light" onClick={ ()=>actions.fetchSwapies2() }></Button>
                 {
-                    store.swapiList2.map( (item, index)=>( <Cards2 key={index} data={item}/> ))
+                    store.swapiList2.map( (item, index)=>( <Cards2 key={index} ir={index++} data={item}/> ))
                     
                 }
             </>

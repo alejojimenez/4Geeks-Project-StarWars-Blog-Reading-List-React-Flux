@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Navbar, Dropdown} from 'react-bootstrap';
+import {Navbar, Dropdown, Image} from 'react-bootstrap';
 
 const NavBarTop = () => {
 
@@ -8,17 +8,19 @@ const NavBarTop = () => {
         <>
             <Navbar bg="light" className = "fixed-top">
                 <Navbar.Brand href="#home">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
-                    width="60"
-                    height="40"
-                    className="d-inline-block align-top"
-                    alt=""
-                />
+                <Link to = '/'> 
+                    <Image
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
+                        width="60"
+                        height="40"
+                        className="d-inline-block align-top"
+                        alt=""
+                    />
+                </Link>
                 </Navbar.Brand>
                 <Dropdown className = "ml-auto">
                     <Dropdown.Toggle id="dropdown-basic">
-                        Favorites
+                    <Link to = '/favorites' >Favorites</Link>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>

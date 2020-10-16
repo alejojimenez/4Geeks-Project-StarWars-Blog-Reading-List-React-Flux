@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
             swapiList:[],
             swapiList1:[],
-            swapiList2:[]
+            swapiList2:[],
+            favorites:[]
 		},
 		actions: {
 			fetchSwapies: async () =>{
