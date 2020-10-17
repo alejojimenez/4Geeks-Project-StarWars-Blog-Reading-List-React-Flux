@@ -23,6 +23,25 @@
   margin: 70px auto 70px auto;    
 }
 
+.positionIcons {
+  float: right;
+}
+
+.listForm {
+  list-style:none;
+  margin: none;
+  border-bottom: 1px solid #7C7C7C;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.countFavorites {
+  background-color: gray;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
 span {
   text-align: center;
 }

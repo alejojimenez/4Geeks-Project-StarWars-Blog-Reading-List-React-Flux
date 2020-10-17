@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../store/appContext';
 import { Link } from 'react-router-dom';
 import { BsHeart } from 'react-icons/bs';
 import { CardDeck, Card, Button, Image } from 'react-bootstrap';
 
 const Cards2 = (props) => {
+    const { store, actions: { setFavorites } } = useContext(Context);
+
+    function addNameFavorites() {
+        const addNameFavorites = props.data.name;
+        console.log('---Props---' + props.data.name);
+        setFavorites(store.favorites.concat(addNameFavorites));
+        console.log(store.favorites);
+    }
+    
     return (
         <>
             <CardDeck>
@@ -15,17 +25,17 @@ const Cards2 = (props) => {
                     <Card.Body>
                         <Card.Title>{props.data.name}</Card.Title>
                         <Card.Text>
-                            <div>Model: {props.data.model}</div>
-                            <div>Length: {props.data.length}</div>
-                            <div>Passengers: {props.data.passengers}</div>
+                            <span>Model: {props.data.model}</span> <br />
+                            <span>Length: {props.data.length}</span> <br />
+                            <span>Passengers: {props.data.passengers}</span>
                         </Card.Text>
-                        <Link to = '/card-detail2'>
-                            <Button variant="outline-primary">
-                                    Learn more!
-                            </Button>
+                        <Link className="btn btn-outline-primary" to={"/vehicles/"+props.id}>
+                            Learn more!
                         </Link>
                         {'  '}
-                        <Button variant="outline-warning"> <BsHeart /> </Button>
+                        <Button variant="outline-warning" onClick={() => addNameFavorites()} > <BsHeart />
+                            {console.log(props.data.name)}
+                        </Button>
                     </Card.Body>
                 </Card>
             </CardDeck>

@@ -26,10 +26,10 @@ function App() {
           </Col>
         </Row>
         <Switch>
+          <Route exact path = '/characters/:id' component = {CardDetail} />
+          <Route exact path = '/planets/:id' component = {CardDetail1} />
+          <Route exact path = '/vehicles/:id' component = {CardDetail2} />
           <Route exact path = '/' component = {Home} />
-          <Route exact path = '/card-detail/' component = {CardDetail} />
-          <Route exact path = '/card-detail1' component = {CardDetail1} />
-          <Route exact path = '/card-detail2' component = {CardDetail2} />
           <Route render = {NotFound} />
         </Switch>
       </BrowserRouter>

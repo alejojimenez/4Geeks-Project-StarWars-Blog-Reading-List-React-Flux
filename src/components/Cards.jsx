@@ -5,12 +5,12 @@ import { BsHeart } from 'react-icons/bs';
 import { CardDeck, Card, Button, Image } from 'react-bootstrap';
 
 const Cards = (props) => {
-    const { store } = useContext(Context);
+    const { store, actions: { setFavorites } } = useContext(Context);
 
     function addNameFavorites() {
         const addNameFavorites = props.data.name;
-        console.log('---Props---' +props.data.name);
-        store.favorites.concat(addNameFavorites); 
+        console.log('---Props---' + props.data.name);
+        setFavorites(store.favorites.concat(addNameFavorites));
         console.log(store.favorites);
     }
 
@@ -19,24 +19,22 @@ const Cards = (props) => {
             <CardDeck>
                 <Card
                     style={{ width: '25rem' }}
-                    className = "col-md-10"
+                    className="col-md-10"
                 >
                     <Image variant="top" src="https://babyology.com.au/wp-content/uploads/2019/11/yoda-wide.jpg" fluid />
                     <Card.Body>
                         <Card.Title>{props.data.name}</Card.Title>
                         <Card.Text>
-                            <div>Gender: {props.data.gender}</div>
-                            <div>Hair Color: {props.data.hair_color}</div>
-                            <div>Eye-Color: {props.data.eye_color}</div>
+                            <span>Gender: {props.data.gender}</span> <br />
+                            <span>Hair Color: {props.data.hair_color}</span> <br />
+                            <span>Eye-Color: {props.data.eye_color}</span>
                         </Card.Text>
-                        <Link to = '/card-detail'>
-                            <Button variant="outline-primary">
-                                    Learn more!
-                            </Button>
+                        <Link className="btn btn-outline-primary" to={"/characters/"+props.id}>
+                            Learn more!
                         </Link>
                         {'  '}
-                        <Button variant="outline-warning" onClick = { () => addNameFavorites() } > <BsHeart />
-                            { console.log(props.data.name) }
+                        <Button variant="outline-warning" onClick={() => addNameFavorites()} > <BsHeart />
+                            {console.log(props.data.name)}
                         </Button>
                     </Card.Body>
                 </Card>

@@ -9,7 +9,7 @@ const ListCards1 = () => {
         return (
             <>
                 { ()=>actions.fetchSwapies1() }
-                { store.swapiList1.map( (item, index)=>( <Cards1 key={index} id={index++} data={item}/> )) }
+                { store.swapiList1.map( (item, index)=>( <Cards1 key={index} id={++index} data={item}/> )) }
             </>
         )
 }
