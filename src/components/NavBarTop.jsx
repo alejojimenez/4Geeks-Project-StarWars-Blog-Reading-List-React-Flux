@@ -1,8 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+//import { FaTrashAlt } from 'react-icons/fa';
 import {Navbar, Dropdown, Image} from 'react-bootstrap';
 
 const NavBarTop = () => {
+
+    // function delList(index) {
+    //     if(index > -1) {
+    //       const filterData = valueList.filter(item => item !== valueList[index]);
+    //       setValueList(filterData);
+    //       methodDelete(filterData);
+    //     }
+    // }
 
     return (
         <>
@@ -20,12 +29,24 @@ const NavBarTop = () => {
                 </Navbar.Brand>
                 <Dropdown className = "ml-auto">
                     <Dropdown.Toggle id="dropdown-basic">
-                    <Link to = '/favorites' >Favorites</Link>
+                        Favorites {' '} 
+                        {/* {store.Favorites.length} */}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        <Dropdown.Item href="">
+                            {/* {
+                            <div className = "list">
+                                <ul className = "lineForm">
+                                    { valueList.map((valor, index) => {
+                                        return (
+                                            <li key={index} className = "listForm" onClick = { () => { delList(index)}}>
+                                               {valor.label} <span className = "positionIcons"> <FaTrashAlt /> </span>
+                                            </li>
+                                    )})}
+                                </ul>
+                            </div>
+                            } */}
+                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </Navbar>

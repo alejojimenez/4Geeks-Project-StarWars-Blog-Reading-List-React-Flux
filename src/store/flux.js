@@ -51,7 +51,39 @@ const getState = ({ getStore, getActions, setStore }) => {
                 const json = await response.json();
                 console.log('--json--', json);
                 setStore({ swapiList2: json.results })
+            },
+            fetchFavoritesGet: async () => {
+                const config = {
+                    "method": "GET",
+                    "headers": {
+                        "Content-type": "application/json"
+                    },
+                }
+                const response = await fetch(
+                    'https://assets.breatheco.de/apis/fake/todos/user/alejojimenez',
+                    config
+                );
+                const json = await response.json();
+                console.log('--json--', json);
+                setStore({ favorites: json.results })
+            },
+            fetchFavoritesPut: async () => {
+                const config = {
+                    "method": "PUT",
+                    "headers": {
+                        "Content-type": "application/json",
+                        "body": "JSON.stringify(newList)"
+                    },
+                }
+                const response = await fetch(
+                    'https://assets.breatheco.de/apis/fake/todos/user/alejojimenez',
+                    config
+                );
+                const json = await response.json();
+                console.log('--json--', json);
+                setStore({ favorites: json.results })
             }
+
 		}
 	};
 };

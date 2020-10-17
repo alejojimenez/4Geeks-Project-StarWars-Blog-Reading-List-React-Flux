@@ -14,3 +14,15 @@
   padding: 0;
   margin: 70px auto 70px auto;    
 }
+
+.linea1 {
+  border-top: 1px solid red;
+  height: 2px;
+  max-width: auto;
+  padding: 0;
+  margin: 70px auto 70px auto;    
+}
+
+span {
+  text-align: center;
+}
