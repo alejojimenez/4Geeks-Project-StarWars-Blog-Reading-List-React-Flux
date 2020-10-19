@@ -35,19 +35,19 @@ const NavBarTop = () => {
                     <Dropdown.Toggle id="dropdown-basic">
                         Favorites {' '} <span className = "countFavorites">{store.favorites.length}</span>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
+                    <Dropdown.Menu alignRight className = "dropdown-menu-align-right">
                         <Dropdown.Item href="">
-                        <div>
-                            <ul>
-                                { store.favorites.map((valor, index) => {
-                                    return (
-                                        <li key={index} className = "listForm" >
-                                            {valor} <span className = "positionIcons"> </span>
-                                        </li>
-                                    )})
-                                }
-                            </ul>
-                        </div>
+                            <div>
+                                <ul>
+                                    { store.favorites.map((valor, index) => {
+                                        return (
+                                            <li key={index} className = "listForm" >
+                                                {valor} <span className = "positionIcons"> {' '} <FaTrashAlt /> </span>
+                                            </li>
+                                        )})
+                                    }
+                                </ul>
+                            </div>
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>

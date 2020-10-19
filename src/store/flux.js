@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             swapiList2:[],
             cardDetailCharacter:[],
             cardDetailPlanets:[],
-            cardDetailVehicle:[],
+            cardDetailSpecies:[],
             favorites:[]
 		},
 		actions: {
@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                     },
                 }
                 const response = await fetch(
-                    'https://swapi.dev/api/vehicles/',
+                    'https://swapi.dev/api/species/',
                     config
                 );
                 const json = await response.json();
@@ -100,53 +100,18 @@ const getState = ({ getStore, getActions, setStore }) => {
                     },
                 }
                 const response = await fetch(
-                    `https://swapi.dev/api/vehicles/${id}/`, 
+                    `https://swapi.dev/api/species/${id}/`, 
                     config
                 );
                 const json = await response.json();
                 console.log('--json--', json);
-                setStore({ cardDetailVehicle: json }) 
+                setStore({ cardDetailSpecies: json }) 
             },
             setFavorites: ( arr = [] ) => {
                 setStore({
                     favorites: arr
                 })
             },
-
-            // // Fetch Favorites GET
-            // fetchFavoritesGet: async () => {
-            //     const config = {
-            //         "method": "GET",
-            //         "headers": {
-            //             "Content-type": "application/json"
-            //         },
-            //     }
-            //     const response = await fetch(
-            //         'https://assets.breatheco.de/apis/fake/todos/user/alejojimenez',
-            //         config
-            //     );
-            //     const json = await response.json();
-            //     console.log('--json--', json);
-            //     setStore({ favorites: json.results })
-            // },
-            // // Fetch Favorities PUT
-            // fetchFavoritesPut: async () => {
-            //     const config = {
-            //         "method": "PUT",
-            //         "headers": {
-            //             "Content-type": "application/json",
-            //             "body": "JSON.stringify(newList)"
-            //         },
-            //     }
-            //     const response = await fetch(
-            //         'https://assets.breatheco.de/apis/fake/todos/user/alejojimenez',
-            //         config
-            //     );
-            //     const json = await response.json();
-            //     console.log('--json--', json);
-            //     setStore({ favorites: json.results })
-            // }
-
 		}
 	};
 };

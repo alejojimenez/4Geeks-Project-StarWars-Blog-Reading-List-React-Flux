@@ -29,10 +29,9 @@
 
 .listForm {
   list-style:none;
-  margin: none;
+  width: 180px;
   border-bottom: 1px solid #7C7C7C;
   padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 .countFavorites {
@@ -40,8 +39,4 @@
   font-weight: bold;
   padding-left: 5px;
   padding-right: 5px;
-
-}
-span {
-  text-align: center;
 }

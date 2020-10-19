@@ -31,7 +31,7 @@ const Home = () => {
             </Row>
             <Row className = "linea">
                 <br />
-                    <h1 style={{ color: 'red' }} >Vehicles</h1>
+                    <h1 style={{ color: 'red' }} >Species</h1>
                 <br />
             </Row>
             <Row>

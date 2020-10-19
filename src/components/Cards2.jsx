@@ -21,13 +21,13 @@ const Cards2 = (props) => {
                     style={{ width: '25rem' }}
                     className = "col-md-10"
                 >
-                    <Image variant="top" src="https://media.wired.com/photos/5dfbd524f3e943000879987a/master/pass/Culture_MilitaryStarWars_MCDSTWA_WD041.jpg" fluid />
+                    <Image variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRmBUbMjjJGsSitz5nqVD7PWdCjHIAITNz32Q&usqp=CAU" fluid />
                     <Card.Body>
                         <Card.Title>{props.data.name}</Card.Title>
                         <Card.Text>
-                            <span>Model: {props.data.model}</span> <br />
-                            <span>Length: {props.data.length}</span> <br />
-                            <span>Passengers: {props.data.passengers}</span>
+                            <span>Title: {props.data.classification}</span> <br />
+                            <span>Director: {props.data.designation}</span> <br />
+                            <span>Producer: {props.data.average_height}</span>
                         </Card.Text>
                         <Link className="btn btn-outline-primary" to={"/vehicles/"+props.id}>
                             Learn more!
