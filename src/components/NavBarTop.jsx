@@ -2,19 +2,20 @@ import React, { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
-import {Navbar, Dropdown, Image} from 'react-bootstrap';
+import { Navbar, Dropdown, Image } from 'react-bootstrap';
 
 const NavBarTop = () => {
 
-    const { store } = useContext(Context);
+    const { store, actions: { setFavorites } } = useContext(Context);
 
-    // function delList(index) {
-    //     if(index > -1) {
-    //       const filterData = valueList.filter(item => item !== valueList[index]);
-    //       setValueList(filterData);
-    //       methodDelete(filterData);
-    //     }
-    // }
+    function delList(index) {
+        if(index > -1) {
+            const filterData = store.favorites.filter(item => item !== store.favorites[index]);
+            console.log('---FavoriteDelete', store.favorites[index]);
+            setFavorites(filterData);
+            console.log(store.favorites);
+        }
+    }
 
     return (
 
@@ -41,7 +42,7 @@ const NavBarTop = () => {
                                 <ul>
                                     { store.favorites.map((valor, index) => {
                                         return (
-                                            <li key={index} className = "listForm" >
+                                            <li key={index} className = "listForm" onClick = { () => { delList(index)} } >
                                                 {valor} <span className = "positionIcons"> {' '} <FaTrashAlt /> </span>
                                             </li>
                                         )})

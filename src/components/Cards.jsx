@@ -33,7 +33,7 @@ const Cards = (props) => {
                             Learn more!
                         </Link>
                         {'  '}
-                        <Button variant="outline-warning" onClick={() => addNameFavorites()} > <BsHeart />
+                        <Button variant="outline-warning" onClick={() => addNameFavorites() } > <BsHeart />
                             {console.log(props.data.name)}
                         </Button>
                     </Card.Body>
