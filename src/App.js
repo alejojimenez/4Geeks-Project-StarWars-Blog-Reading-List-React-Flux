@@ -13,28 +13,30 @@ import NotFound from './views/NotFound.jsx';
 import CardDetail from './components/CardDetail';
 import CardDetail1 from './components/CardDetail1';
 import CardDetail2 from './components/CardDetail2';
+import Footer from './views/Footer'
 
 function App() {
   return (
-
-    <Container>
-      <BrowserRouter>
-        <Row>
-          <Col>
-            <NavBarTop />
-            <br></br>
-          </Col>
-        </Row>
-        <Switch>
-          <Route exact path = '/characters/:id' component = {CardDetail} />
-          <Route exact path = '/planets/:id' component = {CardDetail1} />
-          <Route exact path = '/vehicles/:id' component = {CardDetail2} />
-          <Route exact path = '/' component = {Home} />
-          <Route render = {NotFound} />
-        </Switch>
-      </BrowserRouter>
-    </Container>
-
+    <div className="backgroundSite">
+      <Container>
+        <BrowserRouter>
+          <Row>
+            <Col>
+              <NavBarTop />
+              <br></br>
+            </Col>
+          </Row>
+          <Switch>
+            <Route exact path = '/characters/:id' component = {CardDetail} />
+            <Route exact path = '/planets/:id' component = {CardDetail1} />
+            <Route exact path = '/vehicles/:id' component = {CardDetail2} />
+            <Route exact path = '/' component = {Home} />
+            <Route render = {NotFound} />
+          </Switch>
+        </BrowserRouter>
+      </Container>
+      <Footer />
+    </div>
     );
 }
 

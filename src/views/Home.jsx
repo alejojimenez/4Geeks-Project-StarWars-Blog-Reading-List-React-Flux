@@ -11,7 +11,7 @@ const Home = () => {
         <Container>
             <Row className = "linea">
                 <br />
-                    <h1 style={{ color: 'red' }} >Characters</h1>
+                    <h1 style={{ color: 'yellow' }} >Characters</h1>
                 <br />
             </Row>
             <Row>
@@ -21,7 +21,7 @@ const Home = () => {
             </Row>
             <Row className = "linea">
                 <br />
-                    <h1 style={{ color: 'red' }} >Planets</h1>
+                    <h1 style={{ color: 'yellow' }} >Planets</h1>
                 <br />
             </Row>
             <Row>
@@ -31,17 +31,13 @@ const Home = () => {
             </Row>
             <Row className = "linea">
                 <br />
-                    <h1 style={{ color: 'red' }} >Species</h1>
+                    <h1 style={{ color: 'yellow' }} >Species</h1>
                 <br />
             </Row>
             <Row>
                 <div className = "row flex-row flex-nowrap overflow-auto">
                     <ListCards2 />
                 </div>
-            </Row>
-            <Row className = "linea">
-                <br />
-                <br />
             </Row>
         </Container>
     )

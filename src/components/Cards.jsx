@@ -17,9 +17,9 @@ const Cards = (props) => {
     return (
         <>
             <CardDeck>
-                <Card
+                <Card variant="Secondary"
                     style={{ width: '25rem' }}
-                    className="col-md-10"
+                    className="col-md-10" 
                 >
                     <Image variant="top" src="https://babyology.com.au/wp-content/uploads/2019/11/yoda-wide.jpg" fluid />
                     <Card.Body>

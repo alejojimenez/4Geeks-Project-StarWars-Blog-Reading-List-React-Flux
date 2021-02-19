@@ -20,19 +20,18 @@ const NavBarTop = () => {
     return (
 
         <>
-            <Navbar bg="light" className = "fixed-top">
+            <Navbar bg="dark" variant="dark" className = "fixed-top">
                 <Navbar.Brand href="#home">
                 <Link to = '/'> 
                     <Image
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
+                        src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG34.png"
                         width="60"
-                        height="40"
-                        className="d-inline-block align-top"
-                        alt=""
+                        height="60"
+                        alt="Star Wars"
                     />
                 </Link>
                 </Navbar.Brand>
-                <Dropdown className = "ml-auto">
+                <Dropdown className = "ml-auto" >
                     <Dropdown.Toggle id="dropdown-basic">
                         Favorites {' '} <span className = "countFavorites">{store.favorites.length}</span>
                     </Dropdown.Toggle>

@@ -23,6 +23,14 @@
   margin: 70px auto 70px auto;    
 }
 
+.backgroundSite {
+  background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg");
+}
+
+.color-text {
+  text-decoration: yellow;
+}
+
 .positionIcons {
   float: right;
 }
